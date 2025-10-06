@@ -39,10 +39,11 @@ blocks:
             - make test
   - name: 'Block #4'
     dependencies:
+      - "\U0001F50D Code Quality"
       - "\U0001F9EA Test Suite"
     task:
       jobs:
         - name: 'Job #1'
           commands:
-            - cache restore
             - make build
+            - artifact push workflow build/
